@@ -37,6 +37,7 @@ body {
   margin: auto;
   background-color: #05576280;
   margin-top: 10px;
+  padding: 10px 5px 10px;
 }
 
 #bodyP {
@@ -129,7 +130,7 @@ border-color: black; */
   }
 
 
-  /*index search button  */
+  /*index search section  */
 .animated-search-form[type=search] {
   width: 10rem;
   border: 0.125rem solid #e6e6e6;
@@ -148,15 +149,14 @@ border-color: black; */
 
 .disp {
   display: flex;
-
   }
 
 #index-search-button {
   margin: 0 0rem 1rem 0;
-
 }
 
-  /* justify-content: space-evenly; */
+#callout {
+
 }
 /* end */
 
