@@ -2,13 +2,16 @@ $('.mainPage').hide();
 $('.narutoFadeOut').hide();
 
 
+
 $('#hero-button').on('click', function(any) {
-    var FadeScreens
+    var FadeScreens;
     $('.narutoFadeIn').fadeOut();
-    $('.narutoFadeOut').fadeIn(2000);
-    $('.heroPage').fadeOut(7000)
-    $('audio#pop')[0].play()
-    $('.mainPage').fadeIn(5000)
+    $('.narutoFadeOut').fadeIn();
+    $('.heroPage').fadeOut(3000);
+    $('.narutoFadeOut').addClass("zoomIn animated");
+    $('.heroPage').addClass('jello animated');
+    $('audio#pop')[0].play();
+    $('.mainPage').fadeIn(5000);
     
 });
 
