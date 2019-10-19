@@ -22,25 +22,27 @@
                 <div class="row" id="searchGroup">
                     <div class="row">
                         <div class="form-group">
-                            <label id="hero-title form-control">Search Here</label>
-                            <input id="hero-search" type="search" name="search" placeholder="Search.."
-                                class="animated-search-form form-control">
+                            <row class="disp">
+                                <a id="hero-search-button" href="#" class="button small">Search</a>
+                                <input id="hero-searchbar" type="search" name="search" placeholder="Search.."
+                                    class="animated-search-form">
+                            </row>
                         </div>
-                        <div class="row text-center">
+                        <!-- <div class="row text-center">
                             <button id="hero-button" class="btn button">Button</button>
-                        </div>
+                        </div> -->
                     </div>
-                    <div class="row">
-                        <img src="/assets/images/narutointro.png" alt="naruto" height="300" width="250" id="narutoIntro"
-                            class="narutoFadeIn">
-                        <img src="/assets/images/rasenganSwitch1.png" alt="rasengan" height="400" width="400"
-                            id="narutoIntro" class="narutoFadeOut">
-                       
-                    </div>
+
                 </div>
 
             </div>
+            <div class="row">
+                <img src="/assets/images/narutointro.png" alt="naruto" height="300" width="250" id="narutoIntro"
+                    class="narutoFadeIn">
+                <img src="/assets/images/rasenganSwitch1.png" alt="rasengan" height="400" width="400" id="narutoIntro"
+                    class="narutoFadeOut">
 
+            </div>
         </div>
     </div>
 
@@ -48,7 +50,7 @@
 
     <!-- *************** MAIN PAGE *********************-->
     <div class="mainPage fadeOut" id="mainPage">
-        <div class="top-bar">
+        <!-- <div class="top-bar">
             <div class="top-bar-left">
                 <ul class="menu">
                     <li class="menu-text">Project 1</li>
@@ -64,16 +66,27 @@
                     <li><a href="#">Six</a></li>
                 </ul>
             </div>
-        </div>
+        </div> -->
 
         <div class="callout large" id="callOut">
-            <div class="row column text-center">
-                <h1>Changing the World Through Design</h1>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.</p>
-                <a href="#" class="button large">Learn More</a>
-                <a href="#" class="button large hollow">Learn Less</a>
+            <div class="row">
+
+                <h1>Search Here</h1>
+                <row class="disp">
+                    <a id="index-search-button" href="#" class="button small">Search</a>
+                    <input id="index-searchbar" type="search" name="search" placeholder="Search.."
+                        class="animated-search-form">
+                </row>
             </div>
         </div>
+
+        <!-- <row>
+                <a id="index-search-button" href="#" class="button large">Search</a>
+                <input id="index-searchbar" type="search" name="search" placeholder="Search.."
+                    class="animated-search-form">
+            </row> -->
+
+
         <div class="bodyP" id="bodyP">
             <div class="row">
                 <div class="medium-6 columns medium-push-6">
@@ -176,14 +189,14 @@
             </div>
         </div>
         <hr>
-        <div class="row column">
+        <!-- <div class="row column">
             <ul class="menu">
                 <li><a href="#">One</a></li>
                 <li><a href="#">Two</a></li>
                 <li><a href="#">Three</a></li>
                 <li><a href="#">Four</a></li>
             </ul>
-        </div>
+        </div> -->
         <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
         <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
         <script>

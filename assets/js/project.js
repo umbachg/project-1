@@ -2,8 +2,7 @@ $('.mainPage').hide();
 $('.narutoFadeOut').hide();
 
 
-
-$('#hero-button').on('click', function(any) {
+$('#hero-search-button').on('click', function(any) {
     var FadeScreens;
     $('.narutoFadeIn').fadeOut();
     $('.narutoFadeOut').fadeIn();
