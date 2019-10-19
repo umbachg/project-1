@@ -1,8 +1,15 @@
-$('.mainPage').fadeOut();
+$('.mainPage').hide();
+$('.narutoFadeOut').hide();
 
 
 $('#hero-button').on('click', function(any) {
-    $('.heroPage').fadeOut(1000);
-    $('.mainPage').fadeIn(5000);
+    var FadeScreens
+    $('.narutoFadeIn').fadeOut();
+    $('.narutoFadeOut').fadeIn(2000);
+    $('.heroPage').fadeOut(7000)
+    $('audio#pop')[0].play()
+    $('.mainPage').fadeIn(5000)
+    
 });
+
 
