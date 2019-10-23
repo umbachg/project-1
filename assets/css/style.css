@@ -6,15 +6,73 @@
 	background-repeat: no-repeat;
   background-size: cover;
 }  */
+h2, h3 {
+  /* font-family: 'Coiny', cursive; */
+  font-family: 'Libre Barcode 128 Text', cursive;
+}
 
 body {
-  background-image: url("../images/ian-valerio-CAFq0pv9HjY-unsplash.jpg");
+  background-image: url("/assets/images/blackBG.jpg");  
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   position: relative;
 
+}
+
+body {
+  background-color: #000;
+}
+
+#orb {
+  position: fixed;
+  top: calc(50% - 150px);
+  left: calc(50% - 150px);
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  box-shadow:
+    inset 0 0 50px #fff,
+    inset 20px 0 80px #f0f,
+    inset -20px 0 80px #0ff,
+    inset 20px 0 300px #f0f,
+    inset -20px 0 300px #0ff,
+    0 0 50px #fff,
+    -10px 0 80px #f0f,
+    10px 0 80px #0ff;
+    z-index: -1;
+}
+
+#orbContain {
+  position: fixed;
+  top: calc(50% - 150px);
+  left: calc(50% - 150px);
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  transition: all 2s;
+  z-index: -1;
+}
+
+.scaled {
+  transform: scale(2); /* Equal to scaleX(2) scaleY(0.5) */
+  
+}
+.spinning {
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
 }
 
 #heroPage {
@@ -35,26 +93,30 @@ body {
 
 #callOut {
   border: 1px black;
+  border-radius: 10px;
   width: 80%;
   margin: auto;
-  background-color: #05576280;
+  background-color: #c183c76c;
   margin-top: 10px;
+  padding: 10px 5px 10px;
 }
 
 #bodyP {
   border: 1px black;
+  border-radius: 10px;
   width: 80%;
   margin: auto;
   margin-top: 10px;
-  background-color: #055762b0;
+  background-color: #a683c76c;
 }
 
 #picSection {
   border: 1px black;
+  border-radius: 10px;
   width: 80%;
   margin: auto;
   margin-top: 10px;
-  background-color: #055762b0;
+  background-color: #7773afb0;
 }
 
 
@@ -85,6 +147,16 @@ border-color: black; */
     width: 100%;
   } 
 
+  #index-search-button {
+    background-color: rgb(125, 104, 248);
+  }
+
+
+
+
+
+
+
   .disp {
     display: flex;
   
@@ -93,7 +165,7 @@ border-color: black; */
   #hero-search-button {
     margin: auto;
     margin-top: -1px;
-    background-color: #b6311a;
+    background-color:  rgb(125, 104, 248);
     padding: 9px; 
     border: 1px dotted black;
   
@@ -119,7 +191,7 @@ border-color: black; */
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    background: url("../images/moujib-aghrout-s9ESRUFnKDg-unsplash.jpg") center center no-repeat;
+    background: url("/assets/images/blackBG.jpg") center center no-repeat;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -134,7 +206,7 @@ border-color: black; */
   }
 
 
-  /*index search button  */
+  /*index search section  */
 .animated-search-form[type=search] {
   width: 10rem;
   border: 0.125rem solid #e6e6e6;
@@ -153,15 +225,12 @@ border-color: black; */
 
 .disp {
   display: flex;
-
   }
 
 #index-search-button {
   margin: 0 0rem 1rem 0;
-
 }
 
-  /* justify-content: space-evenly; */
 
 /* end */
 

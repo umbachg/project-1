@@ -1,20 +1,30 @@
 
 $('#orbContain').hide();
+$('#mainPage').hide();
 
-$('#button').on('click', function(any){
+$('#hero-search-button').on('click', function (any) {
     var fadeIn
-    
+
     $('#orbContain').show();//.addClass('zoomIn animated slower');
     animateCSS('#orb', 'rollIn', () => {
         $('#orbContain').addClass('scaled')
 
-        animateCSS('#orb', 'heartBeat', () => {
+        animateCSS('#orb', 'flash1', () => {
             $('#orb').addClass('spinning')
 
             // animateCSS('#orb', 'zoomIn');
-    });
-        
+        });
+
     })
+})
+
+$('#hero-search-button-img').mouseenter(function () {
+    $('#hero-search-button-img').removeClass('flash').addClass('heartBeat');
+})
+
+$('#hero-search-button-img').mouseleave(function () {
+
+    $('#hero-search-button-img').removeClass('heartBeat').addClass('flash');
 })
 
 
@@ -35,24 +45,20 @@ function animateCSS(element, animationName, callback) {
 
 
 
-$('.mainPage').hide();
-$('.narutoFadeOut').hide();
-$('#chibiNaru').hide();
-$('#chibiSus').hide();
-$('#shatter').hide();
 
 
 
-$('#hero-search-button').on('click', function(any) {
+
+$('#hero-search-button').on('click', function (any) {
     var FadeScreens;
-    $('.narutoFadeIn').fadeOut();
-    $('.narutoFadeOut').fadeIn();
-    $('.heroPage').fadeOut(3000);
-    $('.narutoFadeOut').addClass("zoomIn animated");
+    // $('.narutoFadeIn').fadeOut();
+    // $('.narutoFadeOut').fadeIn();
+    $('.heroPage').fadeOut();
+    // $('.narutoFadeOut').addClass("zoomIn animated ");
     $('.heroPage').addClass('jello animated');
-    $('audio#pop')[0].play();
-    $('.mainPage').fadeIn(5000);
-    
+    // $('audio#pop')[0].play();
+    $('.mainPage').fadeIn(3500);
+
 });
 
 
