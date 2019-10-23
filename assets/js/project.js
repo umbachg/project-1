@@ -13,8 +13,8 @@ $('#hero-search-button').on('click', function (any) {
 
             // animateCSS('#orb', 'zoomIn');
         });
-
     })
+    $('.stat').addClass('flip animated slow')
 });
 
 $('#index-search-button').on('click', function(){
@@ -23,6 +23,7 @@ $('#index-search-button').on('click', function(){
    animateCSS('#orbContain', 'zoomOut', () =>{
        $('#orbContain').addClass('heartBeat')
    })
+   $('.stat').addClass('flip animated slow')
 })
 
 $('#hero-search-button-img').mouseenter(function () {
@@ -41,6 +42,7 @@ $('#hero-search-button').on('click', function (any) {
     $('#mainPage').fadeIn(3500);
 
 });
+
 
 
 function animateCSS(element, animationName, callback) {
