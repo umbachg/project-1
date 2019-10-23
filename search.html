@@ -3,25 +3,26 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Favorite Movies</title>
+  <title>Anime Search</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
 </head>
 
 <body>
   <div class="container">
-    <h1>Movie Search</h1>
+    <h1>Anime Search</h1>
 
     <!-- This form will be where users input data about the movies -->
     <form id="movie-form">
-      <label for="movie-input">Search for a movie</label>
+      <label for="movie-input">Anime Search</label>
       <input type="text" id="movie-input"><br>
 
       <!-- This button will trigger our AJAX call -->
       <input id="find-movie" type="submit" value="Movie Search">
     </form>
 
-    <!-- We'll be dumping our JSON contents in here -->
+    <!--  dumping our JSON contents in here -->
     <div id="movie-view"></div>
+    <div id="tv-info"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript">
@@ -31,19 +32,20 @@
         // event.preventDefault() can be used to prevent an event's default behavior.
         // Here, it prevents the submit button from trying to submit a form when clicked
         event.preventDefault();
-
+        $("#movie-view").empty();
         // Here we grab the text from the input box
         var movie = $("#movie-input").val();
 
+
         // Here we construct our URL
          var queryURL = "https://api.jikan.moe/v3/search/anime"
-        // var queryURL = "https://www.omdbapi.com/?t=" + movie + "&apikey=trilogy";
+         var queryURL2 = "https://api.themoviedb.org/3/search/tv?api_key=db7158e18be46721680790e98a0633f3&language=en-US&query=naruto&page=1"
+         
 
-        // Write code between the dashes below to hit the queryURL with $ajax, then take the response data
-        // and display it in the div with an id of movie-view
 
-        // ------YOUR CODE GOES IN THESE DASHES. DO NOT MANUALLY EDIT THE HTML ABOVE.
-
+         var movieTitle = $("<div id='title-movie'>");
+              movieTitle.append(`<h4>Movies</h4>`);
+              $("#movie-view").append(movieTitle);
         $.ajax({
           url: queryURL,
           method: "GET",
@@ -52,12 +54,63 @@
             limit: 16,  
           },
         }).then(function(response) {
-          $("#movie-view").text(JSON.stringify(response));
+          for (var i = 0; i < response.results.length; i++) {
+            var results = response.results[i];
+            console.log(results);
+            console.log(results.image_url);
+            // console.log(response.Poster);
+            
+          $("#movie-view").append(`<a href="${results.url}" target=_blank><img src="${results.image_url}" alt="${results.title} Poster"></a>`);
+          
+
+          }
         });
+         // create a new variable  and div for the new tv tittle info and append all the tv info on the page
+        var tvTitle = $("<div id='title-tv'>");
+              tvTitle.append(`<h4>Television Shows</h4>`);
+              $("#tv-info").append(tvTitle);
+        // AJAX call for second api 
+      $.ajax({
+      url: queryURL2,
+      method: "GET", 
+    }).then(function(response) {
+       //$("#tv-info").text(JSON.stringify(response));
+      console.log(response)
+      // for loop to get all the result and console log to test if information is being displayed. 
+      for (var i = 0; i < response.results.length; i++) {
+            var anime = response.results[i];
+      //      console.log("secondvalue"+JSON.stringify(results2));
+      // informaton that will be retrieved name, origin country, original name, popularity, overwiew. 
+            $("#tv-info").text(anime.overview);
 
-        // -----------------------------------------------------------------------
+        }
+    })
 
-      });
+
+//          const responses = []
+//          responses.push($.ajax({
+//           url: queryURL,
+//           method: "GET",
+//           data: {
+//             q: movie,
+//             limit: 16,  
+//           },
+//         }))
+//          responses.push($.ajax())
+         
+//          Promise.all(responses)
+//          .then(function (results) {
+//           results[0]
+//           results[1]
+//            })
+//           .catch()
+// })
+
+})
+
+    
+
+
     </script>
   </div>
 </body>
