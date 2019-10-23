@@ -16,7 +16,7 @@ $('#hero-search-button').on('click', function (any) {
         });
 
     })
-})
+});
 
 $('#hero-search-button-img').mouseenter(function () {
     $('#hero-search-button-img').removeClass('flash').addClass('heartBeat');
@@ -27,6 +27,17 @@ $('#hero-search-button-img').mouseleave(function () {
     $('#hero-search-button-img').removeClass('heartBeat').addClass('flash');
 })
 
+$('#hero-search-button').on('click', function (any) {
+    var FadeScreens;
+    // $('.narutoFadeIn').fadeOut();
+    // $('.narutoFadeOut').fadeIn();
+    $('.heroPage').fadeOut();
+    // $('.narutoFadeOut').addClass("zoomIn animated ");
+    $('.heroPage').addClass('jello animated');
+    // $('audio#pop')[0].play();
+    $('.mainPage').fadeIn(3500);
+
+});
 
 
 function animateCSS(element, animationName, callback) {
@@ -45,20 +56,5 @@ function animateCSS(element, animationName, callback) {
 
 
 
-
-
-
-
-$('#hero-search-button').on('click', function (any) {
-    var FadeScreens;
-    // $('.narutoFadeIn').fadeOut();
-    // $('.narutoFadeOut').fadeIn();
-    $('.heroPage').fadeOut();
-    // $('.narutoFadeOut').addClass("zoomIn animated ");
-    $('.heroPage').addClass('jello animated');
-    // $('audio#pop')[0].play();
-    $('.mainPage').fadeIn(3500);
-
-});
 
 
