@@ -4,12 +4,11 @@ $('#mainPage').hide();
 
 $('#hero-search-button').on('click', function (any) {
     var fadeIn
-
     $('#orbContain').show();//.addClass('zoomIn animated slower');
     animateCSS('#orb', 'rollIn', () => {
         $('#orbContain').addClass('scaled')
 
-        animateCSS('#orb', 'flash', () => {
+        animateCSS('#orb', 'pulse', () => {
             $('#orb').addClass('spinning')
 
             // animateCSS('#orb', 'zoomIn');
@@ -17,6 +16,14 @@ $('#hero-search-button').on('click', function (any) {
 
     })
 });
+
+$('#index-search-button').on('click', function(){
+    $('.mainPage').fadeOut()
+    $('.mainPage').fadeIn(2000)
+   animateCSS('#orbContain', 'zoomOut', () =>{
+       $('#orbContain').addClass('heartBeat')
+   })
+})
 
 $('#hero-search-button-img').mouseenter(function () {
     $('#hero-search-button-img').removeClass('flash').addClass('heartBeat');
