@@ -9,7 +9,7 @@ $('#hero-search-button').on('click', function (any) {
     animateCSS('#orb', 'rollIn', () => {
         $('#orbContain').addClass('scaled')
 
-        animateCSS('#orb', 'flash1', () => {
+        animateCSS('#orb', 'flash', () => {
             $('#orb').addClass('spinning')
 
             // animateCSS('#orb', 'zoomIn');
@@ -29,13 +29,9 @@ $('#hero-search-button-img').mouseleave(function () {
 
 $('#hero-search-button').on('click', function (any) {
     var FadeScreens;
-    // $('.narutoFadeIn').fadeOut();
-    // $('.narutoFadeOut').fadeIn();
     $('.heroPage').fadeOut();
-    // $('.narutoFadeOut').addClass("zoomIn animated ");
     $('.heroPage').addClass('jello animated');
-    // $('audio#pop')[0].play();
-    $('.mainPage').fadeIn(3500);
+    $('#mainPage').fadeIn(3500);
 
 });
 
