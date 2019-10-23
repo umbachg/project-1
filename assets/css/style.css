@@ -1,18 +1,8 @@
-/* html {
-  background-image: url("../images/ian-valerio-CAFq0pv9HjY-unsplash.jpg");
-  margin-bottom: 70px;
-  height: 100%;
-	background-position: center;
-	background-repeat: no-repeat;
-  background-size: cover;
-}  */
 h2, h3 {
-  /* font-family: 'Coiny', cursive; */
   font-family: 'Libre Barcode 128 Text', cursive;
 }
 
 body {
-  /* background-image: url("../images/ian-valerio-CAFq0pv9HjY-unsplash.jpg"); */
   background-color: #000;
   
   background-position: center;
@@ -21,6 +11,60 @@ body {
   background-size: cover;
   position: relative;
 
+}
+
+body {
+  background-color: #000;
+}
+
+#orb {
+  position: fixed;
+  top: calc(50% - 150px);
+  left: calc(50% - 150px);
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  box-shadow:
+    inset 0 0 50px #fff,
+    inset 20px 0 80px #f0f,
+    inset -20px 0 80px #0ff,
+    inset 20px 0 300px #f0f,
+    inset -20px 0 300px #0ff,
+    0 0 50px #fff,
+    -10px 0 80px #f0f,
+    10px 0 80px #0ff;
+    z-index: -1;
+}
+
+#orbContain {
+  position: fixed;
+  top: calc(50% - 150px);
+  left: calc(50% - 150px);
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  transition: all 2s;
+  z-index: -1;
+}
+
+.scaled {
+  transform: scale(2); /* Equal to scaleX(2) scaleY(0.5) */
+  
+}
+.spinning {
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
 }
 
 #heroPage {
@@ -68,27 +112,13 @@ body {
 }
 
 
-/* #numSection { */
-  /* background-color: #055762b0;
-  border-block: 5px;
-border-color: black; */
+
 
 
 #stat {
   color: white;
 }
 
- /* .animated-search-form[type=search] {
-    width: 50;
-    border: 0.125rem solid #e6e6e6;
-    box-shadow: 0 0 3.125rem rgba(0, 0, 0, 0.18);
-    border-radius: 0;
-    background-image: url("//image.ibb.co/i7NbrQ/search_icon_15.png");
-    background-position: 0.625rem 0.625rem;
-    background-repeat: no-repeat;
-    padding: 0.75rem 1.25rem 0.75rem 2rem;
-    transition: width 0.4s ease-in-out;
-  } */
   
   
   .animated-search-form[type=search]:focus {
@@ -113,7 +143,7 @@ border-color: black; */
   #hero-search-button {
     margin: auto;
     margin-top: -1px;
-    background-color: #b6311a;
+    background-color:  rgb(125, 104, 248);
     padding: 9px; 
     border: 1px dotted black;
   
@@ -139,7 +169,7 @@ border-color: black; */
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    background: url("../images/moujib-aghrout-s9ESRUFnKDg-unsplash.jpg") center center no-repeat;
+    background: url("/assets/images/blackBG.jpg") center center no-repeat;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -188,45 +218,7 @@ hr {
   
   
   
-  /* .hero-full-screen .top-content-section {
-    width: 100%;
-  } */
-  
-  /* .hero-full-screen .bottom-content-section {
-    padding: 1rem;
-  }
-  
-  .hero-full-screen .bottom-content-section svg {
-    height: 3.75rem;
-    width: 3.75rem;
-    fill: #fefefe;
-  } */
-  
-  /* .hero-full-screen .top-bar {
-    background: transparent;
-  }
-  
-  .hero-full-screen .top-bar .menu {
-    background: transparent;
-  }
-  
-  .hero-full-screen .top-bar .menu-text {
-    color: #fefefe;
-  }
-  
-  .hero-full-screen .top-bar .menu li {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  
-  .hero-full-screen .top-bar .menu a {
-    color: #fefefe;
-    font-weight: bold;
-  } */
+
   
   
   
