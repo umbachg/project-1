@@ -6,9 +6,15 @@
 	background-repeat: no-repeat;
   background-size: cover;
 }  */
+h2, h3 {
+  /* font-family: 'Coiny', cursive; */
+  font-family: 'Libre Barcode 128 Text', cursive;
+}
 
 body {
-  background-image: url("../images/ian-valerio-CAFq0pv9HjY-unsplash.jpg");
+  /* background-image: url("../images/ian-valerio-CAFq0pv9HjY-unsplash.jpg"); */
+  background-color: #000;
+  
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -35,26 +41,30 @@ body {
 
 #callOut {
   border: 1px black;
+  border-radius: 10px;
   width: 80%;
   margin: auto;
-  background-color: #05576280;
+  background-color: #c183c76c;
   margin-top: 10px;
+  padding: 10px 5px 10px;
 }
 
 #bodyP {
   border: 1px black;
+  border-radius: 10px;
   width: 80%;
   margin: auto;
   margin-top: 10px;
-  background-color: #055762b0;
+  background-color: #a683c76c;
 }
 
 #picSection {
   border: 1px black;
+  border-radius: 10px;
   width: 80%;
   margin: auto;
   margin-top: 10px;
-  background-color: #055762b0;
+  background-color: #7773afb0;
 }
 
 
@@ -84,6 +94,16 @@ border-color: black; */
   .animated-search-form[type=search]:focus {
     width: 100%;
   } 
+
+  #index-search-button {
+    background-color: rgb(125, 104, 248);
+  }
+
+
+
+
+
+
 
   .disp {
     display: flex;
@@ -134,7 +154,7 @@ border-color: black; */
   }
 
 
-  /*index search button  */
+  /*index search section  */
 .animated-search-form[type=search] {
   width: 10rem;
   border: 0.125rem solid #e6e6e6;
@@ -153,17 +173,13 @@ border-color: black; */
 
 .disp {
   display: flex;
-
   }
 
 #index-search-button {
   margin: 0 0rem 1rem 0;
-
 }
 
-  /* justify-content: space-evenly; */
 
-/* end */
 
 hr {
   border-color: #05576280;
