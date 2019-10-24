@@ -1,9 +1,9 @@
-$("#find-movie").on("click", function (event) {
+$("#hero-search-button").on("click", function (event) {
   // event.preventDefault() can be used to prevent an event's default behavior.
   // Here, it prevents the submit button from trying to submit a form when clicked
   event.preventDefault();
-  $("#movie-view").empty();
-  $("#tv-info").empty()
+  $("#thumbnail-img").empty();
+  $("#picSection").empty()
   // Here we grab the text from the input box
   var movie = $("#movie-input").val();
   
@@ -16,13 +16,13 @@ $("#find-movie").on("click", function (event) {
 
   var movieTitle = $("<div id='title-movie'>");
   movieTitle.append(`<h4>Movies</h4>`);
-  $("#movie-view").append(movieTitle);
+  $("#thumbnail-img").append(movieTitle);
   $.ajax({
     url: queryURL,
     method: "GET",
     data: {
       q: movie,
-      limit: 16
+      limit: 3
     }
   }).then(function (response) {
     for (var i = 0; i < response.results.length; i++) {
@@ -31,22 +31,22 @@ $("#find-movie").on("click", function (event) {
       // console.log(results.image_url);
       // console.log(response.Poster);
 
-      $("#movie-view").append(
-        `<a href="${results.url}" target=_blank><img src="${results.image_url}" alt="${results.title} Poster"></a>`
+      $("#thumbnail-img").append(
+        `<img src="${results.image_url}" alt="${results.title} Poster">`
       );
     }
   });
   // create a new variable  and div for the new tv tittle info and append all the tv info on the page
   var tvTitle = $("<div id='title-tv'>");
   tvTitle.append(`<h4>Television Shows</h4>`);
-  $("#tv-info").append(tvTitle);
+  $("#picSection").append(tvTitle);
 
   // AJAX call for second api
   $.ajax({
     url: queryURL2,
     method: "GET"
   }).then(function (response) {
-    //$("#tv-info").text(JSON.stringify(response));
+    //$("#picSection").text(JSON.stringify(response));
     console.log("Tele Result:" + response.results);
     // for loop to get all the result and console log to test if information is being displayed.
     for (var i = 0; i < response.results.length; i++) {
@@ -56,7 +56,7 @@ $("#find-movie").on("click", function (event) {
       // informaton that will be retrieved name, origin country, original name, popularity, overwiew.
       if (imgSrc === null) {
       } else {
-        $("#tv-info").append(
+        $("#picSection").append(
           `<a href="#" target=_blank><img src="http://image.tmdb.org/t/p/w185/${anime.poster_path}" alt="${anime.original_name} Poster"></a>`
         );
       }

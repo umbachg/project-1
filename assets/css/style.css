@@ -159,7 +159,7 @@ body {
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    background: url("/assets/images/blackBG.jpg") center center no-repeat;
+    background: url("./assets/images/blackBG.jpg") center center no-repeat;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -204,8 +204,28 @@ hr {
   border: 60px
 }
   
+
+.picSection {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.thumbnail-img {
+  align-content: center;
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: auto;
+}
   
+#movie-form {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  top: 200px;
   
+}
 
   
   
