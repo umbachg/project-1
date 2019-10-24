@@ -9,7 +9,10 @@
     <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/animate.css">
-    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan|Coiny|Libre+Barcode+128+Text|Libre+Barcode+39+Extended+Text|Major+Mono+Display|Vollkorn+SC&display=swap">
+    <link
+        href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan|Coiny|Libre+Barcode+128+Text|Libre+Barcode+39+Extended+Text|Major+Mono+Display|Vollkorn+SC&display=swap">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
 
 </head>
 <!-- THE ORB -->
@@ -32,11 +35,26 @@
                     <div class="row">
                         <div class="form-group">
                             <row class="disp">
-                                <a id="hero-search-button" href="#" class="button small"><img
+                                <h3>Anime search</h3> 
+                                <!-- This form will be where users input data about the movies -->
+                                <form id="movie-form">
+                                    <label for="movie-input">Anime Search</label>
+                                    <input type="text" id="movie-input"><br>
+
+                                    <!-- This button will trigger our AJAX call -->
+                                    <input id="find-movie" type="submit" value="Movie Search">
+                                </form>
+
+                                <!--  dumping our JSON contents in here -->
+                                <div id="movie-view"></div>
+                                <div id="tv-info"></div>
+
+
+                                <!-- <a id="hero-search-button" href="#" class="button small"><img
                                         src="/assets/images/hidden leaf symbol.png" alt="hidden" height="50" width="25"
                                         id="hero-search-button-img" class="animated"></a>
                                 <input id="hero-searchbar" type="search" name="search" placeholder="Search.."
-                                    class="animated-search-form">
+                                    class="animated-search-form"> -->
                             </row>
                         </div>
                     </div>
@@ -50,13 +68,15 @@
 
 
 
+
+
     <!-- *************** MAIN PAGE *********************-->
 
     <div class="mainPage" id="mainPage">
 
 
-    <div class="callout large" id="callOut">
-        <div class="row">
+        <div class="callout large" id="callOut">
+            <div class="row">
 
 
                 <row class="disp">
@@ -70,7 +90,7 @@
         <div class="bodyP" id="bodyP">
             <div class="row">
                 <div class="medium-6 columns medium-push-6">
-                    <img class="thumbnail" src="https://placehold.it/750x350">
+                    <img  class="thumbnail" src="https://placehold.it/750x350">
                 </div>
                 <div class="medium-6 columns medium-pull-6">
                     <h2>INFO</h2>
@@ -91,7 +111,7 @@
 
                 <div class="stat" id="stat">28</div><span id="stat">Websites</span id="stat">
                 </a>
-                </li> -->
+                </li> 
                 <li><a href="#">
                         <div class="stat" id="stat">43</div><span id="stat">Apps</span id="stat">
                     </a>
@@ -116,29 +136,29 @@
                 <h3>ANIME</h3>
             </div>
             <div class="row medium-up-3 large-up-4">
-                <div class="column">
+                <div     class="column">
                     <img class="thumbnail" src="https://placehold.it/550x550">
                 </div>
                 <div class="column">
-                    <img class="thumbnail" src="https://placehold.it/550x550">
+                    <img  class="thumbnail" src="https://placehold.it/550x550">
                 </div>
                 <div class="column">
-                    <img class="thumbnail" src="https://placehold.it/550x550">
+                    <img  class="thumbnail" src="https://placehold.it/550x550">
                 </div>
                 <div class="column">
-                    <img class="thumbnail" src="https://placehold.it/550x550">
+                    <img  class="thumbnail" src="https://placehold.it/550x550">
                 </div>
                 <div class="column">
-                    <img class="thumbnail" src="https://placehold.it/550x550">
+                    <img  class="thumbnail" src="https://placehold.it/550x550">
                 </div>
                 <div class="column">
-                    <img class="thumbnail" src="https://placehold.it/550x550">
+                    <img  class="thumbnail" src="https://placehold.it/550x550">
                 </div>
                 <div class="column">
-                    <img class="thumbnail" src="https://placehold.it/550x550">
+                    <img  class="thumbnail" src="https://placehold.it/550x550">
                 </div>
                 <div class="column">
-                    <img class="thumbnail" src="https://placehold.it/550x550">
+                    <img  class="thumbnail" src="https://placehold.it/550x550">
                 </div>
             </div>
         </div>
@@ -148,9 +168,10 @@
         <script>
             $(document).foundation();
         </script>
-  
+
     </div>
     <script src="/assets/js/project.js"></script>
+    <script src="/assets/js/project2.js"></script>
 
 
 </body>
